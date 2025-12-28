@@ -1,19 +1,17 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
-	ScavTrap trap_a("Pinchitos");
-
-	trap_a.guardGate();
-	trap_a.guardGate();
+	FragTrap trap_a("Pinchitos");
 
 	int i = 0;
 	// test sin puntos de vida
 	std::cout	<< "----------------------------" <<std::endl
 				<< "-TEST: agotando hitPoints-" << std::endl
 				<< "----------------------------" <<std::endl;
-	while(i++ < 4)
+	while(i++ < 5)
 	{
 		std::cout << "ROUND " << i << std::endl;
 		trap_a.beRepaired(2);
@@ -27,7 +25,7 @@ int main(void)
 				<< "-TEST: agotando energyPoints-" << std::endl
 				<< "----------------------------" <<std::endl;
 	
-	ScavTrap trap_b("Muellecitos");
+	FragTrap trap_b("Muellecitos");
 	i=0;
 	while(i++ < 101)
 	{

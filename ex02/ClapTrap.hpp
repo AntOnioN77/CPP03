@@ -4,14 +4,13 @@
 # include <string>
 # include <iostream>
 
-# define CLAP_HIT_POINTS 10
-
 class ClapTrap
 {
 	protected:
 		// Atributos
 		std::string		name;
 		unsigned int	hitPoints;
+		unsigned int	max_hitPoints;
 		unsigned int	energyPoints;
 		unsigned int	attackDamage;
 		std::string	 	type;
