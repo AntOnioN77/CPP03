@@ -4,23 +4,20 @@
 ////////////////
 
 ClapTrap::ClapTrap(): name("no_name"), hitPoints(10),
-	max_hitPoints(10), energyPoints(10), attackDamage(0),
-	type("ClapTrap")
+energyPoints(10), attackDamage(0), type("ClapTrap")
 {
 	std::cout << "ClapTrap Default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name): name(name), hitPoints(10),
-	max_hitPoints(10), energyPoints(10), attackDamage(0),
-	type("ClapTrap")
+energyPoints(10), attackDamage(0), type("ClapTrap")
 {
-	std::cout << "ClapTrap " << name << " constructor(name) called" << std::endl;
+	std::cout << "ClapTrap " << name << " Name constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy): name(copy.name),
-	hitPoints(copy.hitPoints), max_hitPoints(copy.max_hitPoints),
-	energyPoints(copy.energyPoints), attackDamage(copy.attackDamage),
-	type(copy.type)
+hitPoints(copy.hitPoints), energyPoints(copy.energyPoints),
+attackDamage(copy.attackDamage), type(copy.type)
 {
 	std::cout << "ClapTrap " << name << "Copy constructor called" <<  std::endl;
 }
@@ -32,7 +29,6 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &assign)
 	{
 		name = assign.name;
 		hitPoints = assign.hitPoints;
-		max_hitPoints = assign.max_hitPoints;
 		energyPoints = assign.energyPoints;
 		attackDamage = assign.attackDamage;
 		type = assign.type;
@@ -99,13 +95,13 @@ void ClapTrap::beRepaired(unsigned int amount)
 
 	energyPoints--;
 
-	if((hitPoints + amount) < max_hitPoints)
+	if((hitPoints + amount) < CLAP_HIT_POINTS)
 	{
 		hitPoints = hitPoints + amount;
 	}
 	else
 	{
-		hitPoints = max_hitPoints;
+		hitPoints = CLAP_HIT_POINTS;
 	}
 	std::cout << type << " " << name << " recover hit points." << " Now has " << hitPoints << " hit points."
 		<< std::endl;

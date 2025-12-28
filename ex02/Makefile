@@ -1,8 +1,8 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = CLAP
-SOURCES = ClapTrap.cpp  main.cpp
-HEADERS = ClapTrap.hpp
+NAME = Serena
+SOURCES = ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
+HEADERS = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
 all: $(NAME)

@@ -1,62 +1,49 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 ////////////////
 //CONSTRUCTORS//
 ////////////////
 
-ScavTrap::ScavTrap(): ClapTrap()
+FragTrap::FragTrap(): ClapTrap()
 {
-	hitPoints = SCAV_HIT_POINTS;
-	max_hitPoints = SCAV_HIT_POINTS;
-	energyPoints = 50;
-	attackDamage = 20;
-	gateKeeperMode = false;
-	std::cout << "ScavTrap Default constructor called" << std::endl;
-	type = "ScavTrap";
+	hitPoints = FRAG_HIT_POINTS;
+	energyPoints = 100;
+	attackDamage = 30;
+	std::cout << "FragTrap Default constructor called" << std::endl;
+	type = "FragTrap";
 }
 
-	ScavTrap::ScavTrap(std::string name): ClapTrap(name)
+	FragTrap::FragTrap(std::string name): ClapTrap(name)
 	{
-		hitPoints = SCAV_HIT_POINTS;
-		max_hitPoints = SCAV_HIT_POINTS;
-		energyPoints = 50;
-		attackDamage = 20;
-		gateKeeperMode = false;
-		std::cout << "ScavTrap " << name << " Name constructor called" << std::endl;
-		type = "ScavTrap";
+		hitPoints = FRAG_HIT_POINTS;
+		energyPoints = 100;
+		attackDamage = 30;
+		std::cout << "FragTrap " << name << " Name constructor called" << std::endl;
+		type = "FragTrap";
 	}
 
-	ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy)
+	FragTrap::FragTrap(const FragTrap &copy): ClapTrap(copy)
 	{
-		std::cout << "ScavTrap " << name << " copy constructor called" << std::endl;
+		std::cout << "FragTrap " << name << " copy constructor called" << std::endl;
 	}
 
-	ScavTrap& ScavTrap::operator=(const ScavTrap &assign)
+	FragTrap& FragTrap::operator=(const FragTrap &assign)
 	{
 		if(this != &assign)
 		{
 			this->ClapTrap::operator=(assign);
-			gateKeeperMode = assign.gateKeeperMode;
 		}
 		return(*this);
 	}
 
-	ScavTrap::~ScavTrap()
+	FragTrap::~FragTrap()
 	{
-		std::cout << "ScavTrap " << name << " Destructor called" << std::endl;
+		std::cout << "FragTrap " << name << " Destructor called" << std::endl;
 	}
 
-	void ScavTrap::guardGate()
+	void FragTrap::highFivesGuys()
 	{
-		if(gateKeeperMode == false)
-		{
-			gateKeeperMode = true;
-			std::cout << "ScavTrap " << name << " is now in Gate keeper mode." << std::endl;
-		}
-		else
-		{
-			std::cout << "ScavTrap " << name << " is still in Gate keeper mode." << std::endl;
-		}
+			std::cout << "FragTrap " << name << "says: Hey guys, high five! " << std::endl;
 	}
 /* 
 ////////////////////

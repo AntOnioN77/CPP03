@@ -1,6 +1,6 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = Serena
+NAME = SCAV
 SOURCES = ClapTrap.cpp ScavTrap.cpp main.cpp
 HEADERS = ClapTrap.hpp ScavTrap.hpp
 OBJECTS = $(SOURCES:.cpp=.o)

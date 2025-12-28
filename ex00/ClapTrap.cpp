@@ -9,7 +9,7 @@ energyPoints(10), attackDamage(0)
 ClapTrap::ClapTrap(std::string name): name(name), hitPoints(10),
 energyPoints(10), attackDamage(0)
 {
-	std::cout << "ClapTrap " << name << "Name constructor called" << std::endl;
+	std::cout << "ClapTrap " << name << " constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy): name(copy.name),
@@ -63,7 +63,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 	else
 	{
 		hitPoints = 0;
-		std::cout << "ClapTrap " << name << "can't take any more damage, he's already down."
+		std::cout << "ClapTrap " << name << " can't take any more damage, he's already down."
 			<< std::endl;
 	}
 }

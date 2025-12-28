@@ -7,7 +7,6 @@
 ScavTrap::ScavTrap(): ClapTrap()
 {
 	hitPoints = SCAV_HIT_POINTS;
-	max_hitPoints = SCAV_HIT_POINTS;
 	energyPoints = 50;
 	attackDamage = 20;
 	gateKeeperMode = false;
@@ -18,7 +17,6 @@ ScavTrap::ScavTrap(): ClapTrap()
 	ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 	{
 		hitPoints = SCAV_HIT_POINTS;
-		max_hitPoints = SCAV_HIT_POINTS;
 		energyPoints = 50;
 		attackDamage = 20;
 		gateKeeperMode = false;

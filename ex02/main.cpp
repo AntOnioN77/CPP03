@@ -13,7 +13,7 @@ int main(void)
 	std::cout	<< "----------------------------" <<std::endl
 				<< "-TEST: agotando hitPoints-" << std::endl
 				<< "----------------------------" <<std::endl;
-	while(i++ < 5)
+	while(i++ < 4)
 	{
 		std::cout << "ROUND " << i << std::endl;
 		trap_a.beRepaired(2);
@@ -29,7 +29,7 @@ int main(void)
 	
 	ScavTrap trap_b("Muellecitos");
 	i=0;
-	while(i++ < 51)
+	while(i++ < 101)
 	{
 		std::cout << "ROUND " << i << std::endl;
 		trap_b.attack("TestDummie");
