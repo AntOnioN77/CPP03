@@ -1,9 +1,13 @@
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main(void)
 {
-	ClapTrap trap_a("Pinchitos");
+	ScavTrap trap_a("Pinchitos");
 
+	trap_a.guardGate();
+	trap_a.guardGate();
+	
 	int i = 0;
 	// test sin puntos de vida
 	std::cout	<< "----------------------------" <<std::endl
@@ -23,7 +27,7 @@ int main(void)
 				<< "-TEST: agotando energyPoints-" << std::endl
 				<< "----------------------------" <<std::endl;
 	
-	ClapTrap trap_b("Muellecitos");
+	ScavTrap trap_b("Muellecitos");
 	i=0;
 	while(i++ < 11)
 	{
@@ -31,6 +35,4 @@ int main(void)
 		trap_b.attack("TestDummie");
 		std::cout << std::endl;
 	}
-
-
 }

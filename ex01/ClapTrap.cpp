@@ -1,15 +1,16 @@
 #include "ClapTrap.hpp"
 
+//CONSTRUCTORS
 ClapTrap::ClapTrap(): name("no_name"), hitPoints(10),
 energyPoints(10), attackDamage(0)
 {
-	std::cout << "ClapTrap " << name << " Default constructor called" << std::endl;
+	std::cout << "Default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name): name(name), hitPoints(10),
 energyPoints(10), attackDamage(0)
 {
-	std::cout << "ClapTrap " << name << "Name constructor called" << std::endl;
+	std::cout << "ClapTrap " << name << " Name constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy): name(copy.name),
@@ -41,7 +42,7 @@ void ClapTrap::attack(const std::string &target)
 {
 	if(hitPoints == 0 || energyPoints == 0)
 	{
-		std::cout << "ClapTrap " << name << " can't attack. Is OFF." << std::endl; 
+		std::cout << "ClapTrap " << name << "can't attack. Is OFF." << std::endl; 
 		return;
 	}
 
@@ -52,6 +53,7 @@ void ClapTrap::attack(const std::string &target)
 			" points of damage!" << std::endl;
 }
 
+//ACTION FUNCTIONS
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	if(hitPoints > amount)
@@ -90,3 +92,4 @@ void ClapTrap::beRepaired(unsigned int amount)
 	std::cout << "ClapTrap " << name << " recover hit points." << " Now has " << hitPoints << " hit points."
 		<< std::endl;
 }
+

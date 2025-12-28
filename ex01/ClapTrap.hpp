@@ -1,6 +1,6 @@
 #ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
 
+# define CLAPTRAP_HPP
 # include <string>
 # include <iostream>
 
@@ -8,13 +8,13 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		// Atributos
 		std::string		name;
 		unsigned int	hitPoints;
 		unsigned int	energyPoints;
 		unsigned int	attackDamage;
-	
+
 	public:
 		// Constructores
 		ClapTrap();
