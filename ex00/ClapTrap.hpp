@@ -1,0 +1,29 @@
+#include <string>
+#include <iostream>
+
+#define MAX_HIT_POINTS 10
+
+class ClapTrap
+{
+	private:
+		// Atributos
+		std::string		name;
+		unsigned int	hitPoints;
+		unsigned int	energyPoints;
+		unsigned int	attackDamage;
+	
+	public:
+		// Constructores
+		ClapTrap();
+		ClapTrap(std::string name);
+		ClapTrap(const ClapTrap &copy);//copia
+		ClapTrap &operator=(const ClapTrap &assign);
+		~ClapTrap();
+
+		void attack(const std::string &target);
+		void takeDamage(unsigned int amount);
+		void beRepaired(unsigned int amount);
+
+		/* //borrar
+		void change_name(std::string new_name); */
+};
