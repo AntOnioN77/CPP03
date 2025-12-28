@@ -62,9 +62,17 @@ void ClapTrap::takeDamage(unsigned int amount)
 	}
 	else
 	{
-		hitPoints = 0;
-		std::cout << "ClapTrap " << name << " can't take any more damage, he's already down."
-			<< std::endl;
+		if(hitPoints != 0)
+		{
+			std::cout << "ClapTrap "<< name << " received " << amount <<
+				" points of damage. Now has 0 hit points" << std::endl;
+			hitPoints = 0;
+		}
+		else
+		{
+			std::cout << "ClapTrap " << name << " can't take any more damage, he's already down."
+				<< std::endl;
+		}
 	}
 }
 
