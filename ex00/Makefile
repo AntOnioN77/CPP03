@@ -4,7 +4,7 @@ NAME = CLAP
 SOURCES = ClapTrap.cpp  main.cpp
 HEADERS = ClapTrap.hpp
 OBJECTS = $(SOURCES:.cpp=.o)
-DEPS = $(SOURCES:.cpp=.p)
+DEPS = $(SOURCES:.cpp=.d)
 
 
 all: $(NAME)
